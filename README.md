@@ -14,30 +14,25 @@ abre local com duplo clique em `index.html` ou serve estático em qualquer host.
 - CTA em dourado, não no verde do WhatsApp — o verde já é a cor da marca dela, um
   botão verde-WhatsApp por cima ficaria confuso com a identidade.
 
-## ⚠️ Sobre as fotos — leia antes de publicar
+## Sobre as fotos
 
-Só chegou **uma foto real** pra esse projeto: `foto_evento_01.png`, do evento
-"Amigas de Peito" (banner rosa, cheio de logo de patrocinador — provavelmente
-campanha de Outubro Rosa). É exatamente a foto que o próprio briefing avisou que
-precisava de confirmação por estar ligada a uma causa de terceiros.
-
-**Decisão tomada (a pedido do Maxwel, sem confirmação direta da Letícia):** usar
-essa foto mesmo assim no Hero e em Sobre, tratada em `ferramentas/build_imagens.py`
-com um efeito de profundidade de campo falso (fundo desfocado + tingido bem forte
-na cor da marca, pra virar uma mancha verde abstrata em vez do banner de
-patrocinador legível) e ela nítida no centro. **Isso não é um cutout perfeito** —
-tentei remoção de fundo de verdade (`rembg`) duas vezes e o ambiente não conseguiu
-carregar o modelo (erro de alocação de memória); o resultado final é o melhor que
-deu pra chegar só com desfoque + cor, sem segmentação real.
-
-**Antes de publicar de verdade, vale conseguir com ela:**
-- Uma foto de rosto sem o banner de fundo (mesmo que informal, celular mesmo) —
-  troca simples em `assets/originais/` + rodar o pipeline de novo.
-- Confirmação de que pode usar essa foto específica do evento (é campanha de
-  terceiros, não da marca dela).
+O Hero e o "Sobre" usam um retrato real dela (`assets/originais/foto_retrato/`),
+processado em `ferramentas/build_imagens.py` (recorte + leve ajuste de cor/nitidez,
+sem tratamento artificial). Substituiu a primeira versão do site, que usava a única
+foto disponível na época — de um evento com banner rosa de patrocinador ("Amigas de
+Peito"), ainda guardada em `assets/originais/fotos_leticia_caires/` mas **fora de
+uso** no pipeline atual.
 
 Os 5 cards de "Áreas de foco" usam textura botânica (SVG), não foto — de propósito,
-pra não repetir a única foto disponível em 5 lugares diferentes.
+pra não repetir a mesma foto em 5 lugares diferentes.
+
+## Minimapa
+
+No fim da seção de CTA final (antes do rodapé), incorporado do Google Maps,
+centrado em "São Judas, Piracicaba - SP" (bairro citado no perfil dela no Google).
+Sem chave de API — é o embed público (`?output=embed`), então não carrega em
+navegador automatizado/headless durante testes locais, mas funciona normal em
+navegador de verdade.
 
 ## Setembro Amarelo (banner sazonal)
 
