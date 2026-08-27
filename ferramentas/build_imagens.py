@@ -41,5 +41,5 @@ if __name__ == "__main__":
     # Caixa (x0, y0, x1, y1) no retrato original de 597x595
     preparar((60, 0, 536, 595), 900, 1125, "hero-leticia", foco_y=0.15)
     preparar((1, 0, 596, 595), 1000, 1000, "sobre-leticia", foco_y=0.4)
-    preparar((0, 90, 597, 403), 1200, 630, "og-leticia", foco_y=0.5)
+    preparar((0, 140, 597, 453), 1200, 630, "og-leticia", foco_y=0.5)
     print("done")
